@@ -82,5 +82,5 @@ for epoch in range(1, num_epochs + 1):
         label = labels[i]
         img = fake[i][0].detach()
         plt.subplot(1, 10, i + 1)
-        plt.imshow(img)
+        plt.imshow(img, cmap='gray')
     plt.savefig(os.path.join(save_path, f'{epoch}.png'), dpi=300)
