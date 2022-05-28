@@ -96,7 +96,7 @@ for epoch in range(1, num_epochs + 1):
         img = fake[i][0].detach()
         plt.subplot(1, 10, i + 1)
         plt.imshow(img, cmap='gray')
-    plt.savefig(os.path.join(save_path, f'{epoch}.png'), dpi=300)
+    plt.savefig(os.path.join(save_path, f'%03d.png' % epoch), dpi=300)
 
 torch.save({
     'G': G.state_dict(),
